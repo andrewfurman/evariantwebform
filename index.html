@@ -1,102 +1,316 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Evariantwebform by andrewfurman</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Evariantwebform</h1>
-      <h2 class="project-tagline">test web form</h2>
-      <a href="https://github.com/andrewfurman/evariantwebform" class="btn">View on GitHub</a>
-      <a href="https://github.com/andrewfurman/evariantwebform/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/andrewfurman/evariantwebform/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0051)http://evariant.com/test/gio/Mission/Opt%20Out.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>Opt Out</title>
 
-    <section class="main-content">
-      <h3>
+		<style>
+			.form-style form {
+				border-top: 1px solid #82a6bb;
+				border-bottom: 1px solid #82a6bb;
+				margin: 27px 0 15px;
+				padding: 0 0 10px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 185.7%;
+				color: #FFF;
+			}
 
-<form id="Opt_Out" name="Opt_Out" action="https://missionhealth.secure.force.com/HC4__WebFormProcessor" method="post">
-	<input type="hidden" class="reference" id="HC4__Inquiry__c.RecordTypeId" name="HC4__Inquiry__c.RecordTypeId" value="012j0000000ItY1AAK" />
-	<input type="hidden" class="picklist" id="HC4__Inquiry__c.HC4__Status__c" name="HC4__Inquiry__c.HC4__Status__c" value="Open" />
-	<input type="hidden" class="string" id="HC4__Inquiry__c.HC4__Subject__c" name="HC4__Inquiry__c.HC4__Subject__c" value="Opt Out form submission" />
-	<input type="hidden" class="picklist" id="Patient.LeadSource" name="Patient.LeadSource" value="Web Form: Opt Out" />
-	<input type="hidden" class="picklist" id="Patient.HC4__MostRecentLeadSource__c" name="Patient.HC4__MostRecentLeadSource__c" value="Web Form: Opt Out" />
-	<input type="hidden" class="string" id="DemandConnectForm" name="DemandConnect.Form" value="Opt_Out" />
-	<label class="string" id="Patient.PostalCode_label" for="Patient.PostalCode">Mailing Zip/Postal Code</label>
-	<input type="text" class="string" id="Patient.PostalCode" name="Patient.PostalCode" value="" /><br/>
-	<label class="boolean" id="Patient.Opt_out_of_Email__c_label" for="Patient.Opt_out_of_Email__c">Opt out of Email</label>
-	<input type="checkbox" class="boolean" id="Patient.Opt_out_of_Email__c" name="Patient.Opt_out_of_Email__c" /><br/>
-	<label class="boolean" id="Patient.Opt_Out_of_Fax__c_label" for="Patient.Opt_Out_of_Fax__c">Opt Out of Fax</label>
-	<input type="checkbox" class="boolean" id="Patient.Opt_Out_of_Fax__c" name="Patient.Opt_Out_of_Fax__c" /><br/>
-	<label class="boolean" id="Patient.Opt_out_of_Mail__c_label" for="Patient.Opt_out_of_Mail__c">Opt out of Mail</label>
-	<input type="checkbox" class="boolean" id="Patient.Opt_out_of_Mail__c" name="Patient.Opt_out_of_Mail__c" /><br/>
-	<label class="boolean" id="Patient.Opt_Out_of_Phone_Calls__c_label" for="Patient.Opt_Out_of_Phone_Calls__c">Opt Out of Phone Calls</label>
-	<input type="checkbox" class="boolean" id="Patient.Opt_Out_of_Phone_Calls__c" name="Patient.Opt_Out_of_Phone_Calls__c" /><br/>
-	<label class="boolean" id="Patient.Opt_Out_of_SMS__c_label" for="Patient.Opt_Out_of_SMS__c">Opt Out of SMS</label>
-	<input type="checkbox" class="boolean" id="Patient.Opt_Out_of_SMS__c" name="Patient.Opt_Out_of_SMS__c" /><br/>
-	<label class="string" id="Patient.FirstName_label" for="Patient.FirstName">First Name</label>
-	<input type="text" class="string" id="Patient.FirstName" name="Patient.FirstName" value="" /><br/>
-	<label class="string" id="Patient.LastName_label" for="Patient.LastName">Last Name</label>
-	<input type="text" class="string" id="Patient.LastName" name="Patient.LastName" value="" /><br/>
-	<label class="email" id="Patient.Email_label" for="Patient.Email">Email</label>
-	<input type="text" class="email" id="Patient.Email" name="Patient.Email" value="" /><br/>
-	<input type="submit" value="Submit" class="disableOnClick" />
-</form>
+			.form-style input[type="text"], .form-style input[type="email"], .form-style input[type="tel"], .form-style input[type="number"] {
+				width: 250px;
+				height: 30px;
+				border: 1px solid #666;
+				border-radius: 3px;
+				outline: 0;
+				margin-bottom: 10px;
+				padding: 2px 5px;
+			}
 
-<script type="text/javascript">
-	DemandConnectFormSettings = {
-		debug: false, /* If true, does NOT send data to the server */
-		logErrors: true, /* If true, errors will be logged on the server */
-		defaultParameterName: 'hcmacid', /* Default URL parameter name for this Web Form */
-		defaultParameterValue: '' /* Default (catch-all) Campaign Tactic for this Web Form */
-	};
-</script>
-<script type="text/javascript" src="https://demandconnect.s3.amazonaws.com/formProcessor.js"></script>
+			.form-style .comment {
+				width: 100px;
+			}
+
+			.form-style radio {
+				margin-bottom: 10px;
+			}
+
+			.form-style textarea {
+				width: 500px !important;
+				height: 75px;
+				border: 1px solid #333;
+				outline: 0;
+			}
+
+			.form-style select {
+				width: 260px;
+				min-height: 30px;
+				border: 1px solid #666;
+				border-radius: 3px;
+				outline: 0;
+				margin-bottom: 10px;
+				padding: 5px 5px;
+			}
+
+			.form-style input[type="submit"] {
+				background: -webkit-gradient(linear, 0 0, 0 100%, from(#b8b8b8), to(#cccccc));
+				background: -webkit-linear-gradient(#b8b8b8, #cccccc);
+				background: -moz-linear-gradient(#b8b8b8, #cccccc);
+				background: -ms-linear-gradient(#b8b8b8, #cccccc);
+				background: -o-linear-gradient(#b8b8b8, #cccccc);
+				background: linear-gradient(#b8b8b8, #cccccc);
+				-pie-background: linear-gradient(#b8b8b8, #cccccc);
+				color: #203306;
+				font-weight: bold;
+				padding: 13px 89px;
+				border-radius: 5px;
+				-webkit-box-shadow: 0 2px 1px #333;
+				box-shadow: 0 2px 1px #333;
+				text-transform: uppercase;
+				border: none;
+				margin: 4px 0 0 3px;
+				text-shadow: 0px 1px 0px #FFF;
+			}
+
+			.form-style input[type="submit"]:hover {
+				background: -webkit-gradient(linear, 0 0, 0 100%, from(#cccccc), to(#b8b8b8));
+				background: -webkit-linear-gradient(#cccccc, #b8b8b8);
+				background: -moz-linear-gradient(#cccccc, #b8b8b8);
+				background: -ms-linear-gradient(#cccccc, #b8b8b8);
+				background: -o-linear-gradient(#cccccc, #b8b8b8);
+				background: linear-gradient(#cccccc, #b8b8b8);
+				-pie-background: linear-gradient(#cccccc, #b8b8b8);
+			}
+
+			.form-style label {
+				display: block;
+				margin-bottom: 1px;
+			}
+
+			.form-style input.error {
+				background-color: #d42a2d;
+				color: #FFF;
+				font-size: 12px;
+			}
+
+			.form-style select.error {
+				background-color: #d42a2d;
+				color: #FFF;
+				font-size: 12px;
+			}
+
+			.form-style textarea.error {
+				background-color: #d42a2d;
+				color: #FFF;
+				font-size: 12px;
+			}
+
+			.form-style label.error {
+				font-family: Arial, Helvetica, sans-serif;
+				color: #F00;
+				font-size: 11px;
+				padding-left: 3px;
+			}
+			span {
+				font-style: italic;
+				font-size: 11px;
+			}
+			input[type=number]::-webkit-inner-spin-button, 
+                input[type=number]::-webkit-outer-spin-button { 
+                -webkit-appearance: none; 
+                 margin: 0; 
+            }
+
+			.form-style form {
+				border-top: 1px solid #82a6bb;
+				border-bottom: 1px solid #82a6bb;
+				margin: 27px 0 15px;
+				padding: 0 0 10px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 185.7%;
+				color: #FFF;
+			}
+
+			.form-style input[type="text"], .form-style input[type="email"], .form-style input[type="tel"] {
+				width: 250px;
+				height: 30px;
+				border: 1px solid #666;
+				border-radius: 3px;
+				outline: 0;
+				margin-bottom: 10px;
+				padding: 2px 5px;
+			}
+
+			.form-style radio {
+				margin-bottom: 10px;
+			}
+
+			.form-style textarea {
+				width: 250px;
+				height: 100px;
+				border: 1px solid #333;
+				outline: 0;
+			}
+
+			.form-style select {
+				width: 260px;
+				height: 30px;
+				border: 1px solid #666;
+				border-radius: 3px;
+				outline: 0;
+				margin-bottom: 10px;
+				padding: 5px 5px;
+			}
+
+			.form-style input[type="submit"] {
+				background: -webkit-gradient(linear, 0 0, 0 100%, from(#b8b8b8), to(#cccccc));
+				background: -webkit-linear-gradient(#b8b8b8, #cccccc);
+				background: -moz-linear-gradient(#b8b8b8, #cccccc);
+				background: -ms-linear-gradient(#b8b8b8, #cccccc);
+				background: -o-linear-gradient(#b8b8b8, #cccccc);
+				background: linear-gradient(#b8b8b8, #cccccc);
+				-pie-background: linear-gradient(#b8b8b8, #cccccc);
+				color: #203306;
+				font-weight: bold;
+				padding: 13px 89px;
+				border-radius: 5px;
+				-webkit-box-shadow: 0 2px 1px #333;
+				box-shadow: 0 2px 1px #333;
+				text-transform: uppercase;
+				border: none;
+				margin: 4px 0 0 3px;
+				text-shadow: 0px 1px 0px #FFF;
+			}
+
+			.form-style input[type="submit"]:hover {
+				background: -webkit-gradient(linear, 0 0, 0 100%, from(#cccccc), to(#b8b8b8));
+				background: -webkit-linear-gradient(#cccccc, #b8b8b8);
+				background: -moz-linear-gradient(#cccccc, #b8b8b8);
+				background: -ms-linear-gradient(#cccccc, #b8b8b8);
+				background: -o-linear-gradient(#cccccc, #b8b8b8);
+				background: linear-gradient(#cccccc, #b8b8b8);
+				-pie-background: linear-gradient(#cccccc, #b8b8b8);
+			}
+
+			.form-style label {
+				display: block;
+				margin-bottom: 1px;
+			}
+
+			.form-style input.error {
+				background-color: #d42a2d;
+				color: #FFF;
+				font-size: 12px;
+			}
+
+			.form-style select.error {
+				background-color: #d42a2d;
+				color: #FFF;
+				font-size: 12px;
+			}
+
+			.form-style textarea.error {
+				background-color: #d42a2d;
+				color: #FFF;
+				font-size: 12px;
+			}
+
+			.form-style label.error {
+				font-family: Arial, Helvetica, sans-serif;
+				color: #F00;
+				font-size: 11px;
+				padding-left: 3px;
+			}
+			span {
+				font-style: italic;
+				font-size: 11px;
+			}
+			.inpatient {
+				display: none;
+			}
+			.outpatient {
+				display: none;
+			}
+			.dispError{
+				display: block !important;
+			}
+			.error{
+				color: red;
+			}
+
+		</style>
+
+		<script type="text/javascript" src="./Opt Out_files/jquery.min.js"></script>
+
+		
+		<script src="./Opt Out_files/jquery.min(1).js"></script>
+		<script src="./Opt Out_files/angular.min.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none !important;}ng\:form{display:block;}</style>
+		<script type="text/javascript" src="./Opt Out_files/jquery.validate.js"></script>
+		<script type="text/javascript" src="./Opt Out_files/mask.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+			  $("#Opt_Out").submit(function(event){
+			  		if (!$(".c1").is(":checked") && !$(".c2").is(":checked") && !$(".c3").is(":checked") && !$(".c4").is(":checked") && !$(".c5").is(":checked")){
+			  			console.log('stop');
+			  			$(".derror").addClass('dispError');
+			  			event.preventDefault();  
+			  		}else{
+			  			$(".derror").removeClass('dispError');
+			  		}
+			  });
+			});
+			function validateForm(){
+				$(".cerror").removeClass('error');
+			}
+		</script>
+	</head>
+	<body>
+		<form class="form-style" id="Opt_Out" name="Opt_Out" action="https://full-missionhealth.cs18.force.com/HC4__WebFormProcessor" method="post" novalidate="novalidate">
+			<input type="hidden" class="reference" id="HC4__Inquiry__c.RecordTypeId" name="HC4__Inquiry__c.RecordTypeId" value="012j0000000ItY1AAK">
+			<input type="hidden" class="picklist" id="HC4__Inquiry__c.HC4__Status__c" name="HC4__Inquiry__c.HC4__Status__c" value="Open">
+			<input type="hidden" class="string" id="HC4__Inquiry__c.HC4__Subject__c" name="HC4__Inquiry__c.HC4__Subject__c" value="Opt Out form submission">
+			<input type="hidden" class="picklist" id="Patient.LeadSource" name="Patient.LeadSource" value="Web Form: Opt Out">
+			<input type="hidden" class="picklist" id="Patient.HC4__MostRecentLeadSource__c" name="Patient.HC4__MostRecentLeadSource__c" value="Web Form: Opt Out">
+			<input type="hidden" class="string" id="DemandConnectForm" name="DemandConnect.Form" value="Opt_Out">
+			<label class="string" id="Patient.FirstName_label" for="Patient.FirstName">First Name</label>
+			<input type="text" class="string required" id="Patient.FirstName" name="Patient.FirstName" value=""><br>
+			<label class="string" id="Patient.LastName_label" for="Patient.LastName">Last Name</label>
+			<input type="text" class="string  required" id="Patient.LastName" name="Patient.LastName" value=""><br>
+			<label class="email" id="Patient.Email_label" for="Patient.Email">Email</label>
+			<input type="text" class="email required" id="Patient.Email" name="Patient.Email" value=""><br>
+			<label class="string" id="Patient.PostalCode_label" for="Patient.PostalCode">Mailing Zip/Postal Code</label>
+			<input type="text" class="string" id="Patient.PostalCode" name="Patient.PostalCode" value=""><br>
+			<label class="boolean" id="Patient.Opt_Out_of_Phone_Calls__c_label" for="Patient.Opt_Out_of_Phone_Calls__c">Opt Out of Phone Calls</label>
+			<input type="checkbox" class="boolean c1" id="Patient.Opt_Out_of_Phone_Calls__c" name="Patient.Opt_Out_of_Phone_Calls__c"><br>
+			<label class="boolean" id="Patient.Opt_out_of_Mail__c_label" for="Patient.Opt_out_of_Mail__c">Opt out of Mail</label>
+			<input type="checkbox" class="boolean c2" id="Patient.Opt_out_of_Mail__c" name="Patient.Opt_out_of_Mail__c"><br>
+			<label class="boolean" id="Patient.Opt_out_of_Email__c_label" for="Patient.Opt_out_of_Email__c">Opt out of Email</label>
+			<input type="checkbox" class="boolean c3" id="Patient.Opt_out_of_Email__c" name="Patient.Opt_out_of_Email__c"><br>
+			<label class="boolean" id="Patient.Opt_Out_of_SMS__c_label" for="Patient.Opt_Out_of_SMS__c">Opt Out of SMS</label>
+			<input type="checkbox" class="boolean c4" id="Patient.Opt_Out_of_SMS__c" name="Patient.Opt_Out_of_SMS__c"><br>
+			<label class="boolean" id="Patient.Opt_Out_of_Fax__c_label" for="Patient.Opt_Out_of_Fax__c">Opt Out of Fax</label>
+			<input type="checkbox" class="boolean c5" id="Patient.Opt_Out_of_Fax__c" name="Patient.Opt_Out_of_Fax__c"><br>
+			<p class="error derror" style="display:none;">Please select</p>
+			<input type="submit" value="Submit" class="disableOnClick">
+		</form>
+		
+
+		<script type="text/javascript">
+			DemandConnectFormSettings = {
+				debug : false, /* If true, does NOT send data to the server */
+				logErrors : true, /* If true, errors will be logged on the server */
+				defaultParameterName : 'hcmacid', /* Default URL parameter name for this Web Form */
+				defaultParameterValue : '' /* Default (catch-all) Campaign Tactic for this Web Form */
+			};
+		</script>
+		<script>
+            jQuery(function($){
+			   $(".date").mask("99/99/9999",{placeholder:"MM/DD/YYYY"});
+			   $(".phone").mask("(999) 999-9999");
+			});
+			$('#Opt_Out').validate();
+        </script>
+    
+
+	
 
 
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/andrewfurman/evariantwebform">Evariantwebform</a> is maintained by <a href="https://github.com/andrewfurman">andrewfurman</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
-</html>
-
+<object id="__symantecPKIClientMessenger" style="display: none;"></object><span id="__symantecPKIClientDetector" style="display: none;">__PRESENT</span></body></html>
