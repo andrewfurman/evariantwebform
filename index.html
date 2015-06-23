@@ -20,7 +20,46 @@
 
     <section class="main-content">
       <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+
+<form id="Opt_Out" name="Opt_Out" action="https://missionhealth.secure.force.com/HC4__WebFormProcessor" method="post">
+	<input type="hidden" class="reference" id="HC4__Inquiry__c.RecordTypeId" name="HC4__Inquiry__c.RecordTypeId" value="012j0000000ItY1AAK" />
+	<input type="hidden" class="picklist" id="HC4__Inquiry__c.HC4__Status__c" name="HC4__Inquiry__c.HC4__Status__c" value="Open" />
+	<input type="hidden" class="string" id="HC4__Inquiry__c.HC4__Subject__c" name="HC4__Inquiry__c.HC4__Subject__c" value="Opt Out form submission" />
+	<input type="hidden" class="picklist" id="Patient.LeadSource" name="Patient.LeadSource" value="Web Form: Opt Out" />
+	<input type="hidden" class="picklist" id="Patient.HC4__MostRecentLeadSource__c" name="Patient.HC4__MostRecentLeadSource__c" value="Web Form: Opt Out" />
+	<input type="hidden" class="string" id="DemandConnectForm" name="DemandConnect.Form" value="Opt_Out" />
+	<label class="string" id="Patient.PostalCode_label" for="Patient.PostalCode">Mailing Zip/Postal Code</label>
+	<input type="text" class="string" id="Patient.PostalCode" name="Patient.PostalCode" value="" /><br/>
+	<label class="boolean" id="Patient.Opt_out_of_Email__c_label" for="Patient.Opt_out_of_Email__c">Opt out of Email</label>
+	<input type="checkbox" class="boolean" id="Patient.Opt_out_of_Email__c" name="Patient.Opt_out_of_Email__c" /><br/>
+	<label class="boolean" id="Patient.Opt_Out_of_Fax__c_label" for="Patient.Opt_Out_of_Fax__c">Opt Out of Fax</label>
+	<input type="checkbox" class="boolean" id="Patient.Opt_Out_of_Fax__c" name="Patient.Opt_Out_of_Fax__c" /><br/>
+	<label class="boolean" id="Patient.Opt_out_of_Mail__c_label" for="Patient.Opt_out_of_Mail__c">Opt out of Mail</label>
+	<input type="checkbox" class="boolean" id="Patient.Opt_out_of_Mail__c" name="Patient.Opt_out_of_Mail__c" /><br/>
+	<label class="boolean" id="Patient.Opt_Out_of_Phone_Calls__c_label" for="Patient.Opt_Out_of_Phone_Calls__c">Opt Out of Phone Calls</label>
+	<input type="checkbox" class="boolean" id="Patient.Opt_Out_of_Phone_Calls__c" name="Patient.Opt_Out_of_Phone_Calls__c" /><br/>
+	<label class="boolean" id="Patient.Opt_Out_of_SMS__c_label" for="Patient.Opt_Out_of_SMS__c">Opt Out of SMS</label>
+	<input type="checkbox" class="boolean" id="Patient.Opt_Out_of_SMS__c" name="Patient.Opt_Out_of_SMS__c" /><br/>
+	<label class="string" id="Patient.FirstName_label" for="Patient.FirstName">First Name</label>
+	<input type="text" class="string" id="Patient.FirstName" name="Patient.FirstName" value="" /><br/>
+	<label class="string" id="Patient.LastName_label" for="Patient.LastName">Last Name</label>
+	<input type="text" class="string" id="Patient.LastName" name="Patient.LastName" value="" /><br/>
+	<label class="email" id="Patient.Email_label" for="Patient.Email">Email</label>
+	<input type="text" class="email" id="Patient.Email" name="Patient.Email" value="" /><br/>
+	<input type="submit" value="Submit" class="disableOnClick" />
+</form>
+
+<script type="text/javascript">
+	DemandConnectFormSettings = {
+		debug: false, /* If true, does NOT send data to the server */
+		logErrors: true, /* If true, errors will be logged on the server */
+		defaultParameterName: 'hcmacid', /* Default URL parameter name for this Web Form */
+		defaultParameterValue: '' /* Default (catch-all) Campaign Tactic for this Web Form */
+	};
+</script>
+<script type="text/javascript" src="https://demandconnect.s3.amazonaws.com/formProcessor.js"></script>
+
+
 
 <pre><code>$ cd your_repo_root/repo_name
 $ git fetch origin
